@@ -22,7 +22,6 @@ Chances are you won't design the spinner yourself, so here are some great resour
   - [Spinkit](https://tobiasahlin.com/spinkit/)
   - [Load Awesome](https://github.danielcardoso.net/load-awesome/animations.html)
   - [Loading.io Spinners](https://loading.io/css/)
-  - [loaders.css](https://connoratherton.com/loaders)
   - [Luke Haas Spinners](https://projects.lukehaas.me/css-loaders/)
 
 ### Under the hood
