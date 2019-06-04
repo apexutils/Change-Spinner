@@ -1,6 +1,6 @@
 # APEX Utils - Change Spinner
 
-![](https://img.shields.io/badge/Plugin_Type-Dynamic_Action-orange.svg) ![](https://img.shields.io/badge/APEX-18.2-success.svg) ![](https://img.shields.io/badge/APEX-19.1-success.svg)
+![](https://img.shields.io/badge/Type-Dynamic_Action-orange.svg) ![](https://img.shields.io/badge/APEX-18.2-success.svg) ![](https://img.shields.io/badge/APEX-19.1-success.svg)
 
 Demo: https://www.apexutils.com
 
