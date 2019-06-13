@@ -21,6 +21,11 @@ as
     l_result apex_plugin.t_dynamic_action_render_result;
 begin
 
+    apex_javascript.add_library
+        ( p_name       => 'script#MIN#'
+        , p_directory  => nvl(:G_APEX_UTILS_APEX_NITRO_IMAGES, p_plugin.file_prefix) || 'js/'
+        );
+
     l_result.javascript_function := 'apexUtils.changeSpinner';
     
     l_result.attribute_01 := p_dynamic_action.attribute_01; --html

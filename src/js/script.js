@@ -1,21 +1,20 @@
 window.apexUtils = window.apexUtils || {};
 window.apexUtils.changeSpinner = function(){
 
-	var me = this;
-	var spinnerHTML = me.action.attribute01;
-	var spinnerCSS  = me.action.attribute02;
+	var spinnerHTML = this.action.attribute01;
+	var spinnerCSS  = this.action.attribute02;
 
 	//Overwriting apex.util.showSpinner with a custom Spinner
-	//the only changes to the original function (19.1) are:
-	//	the out.markup parameter
-	//  the custom css part
+	//the only changes to the original function (taken from 19.1) are:
+	//	the markup of lSpinner$
+	//  injecting the custom css
 
 	apex.util.showSpinner = function( pContainer, pOptions ) {
 	    var lSpinner$, lLeft, lTop, lBottom, lYPosition, lYOffset,
 	        out         = apex.util.htmlBuilder(),
 	        lOptions    = $.extend ({
 	            alert:          apex.lang.getMessage( "APEX.PROCESSING" ),
-	            spinnerClass:    ""
+	            spinnerClass:   ""
 	        }, pOptions ),
 	        lContainer$ = ( pContainer && !lOptions.fixed ) ? $( pContainer ) : $( "body" ),
 	        lWindow$    = $( window ),
@@ -25,16 +24,14 @@ window.apexUtils.changeSpinner = function(){
 	            left: lWindow$.scrollLeft()
 	        };
 
-	    // has to be converted into an inline block for the calculations to work properly
-	    spinnerHTML = 
-	    	'<div class="apex-utils-spinner-outer" style="display: inline-block;">' +
-    			spinnerHTML +
-    		'</div>';
+	    //change 1 starts here --------------------------------
+	    spinnerHTML = spinnerHTML.replace(/#ALERT#/g, lOptions.alert);
+	    spinnerHTML = spinnerHTML.replace(/#SPINNERCLASS#/g, lOptions.spinnerClass);
 
-	    out.markup(spinnerHTML);
+	    lSpinner$ = $( spinnerHTML );
 
-	    // And render and position the spinner and overlay
-	    lSpinner$ = $( out.toString() );
+	    lSpinner$.css('z-index', 2000);
+	    //change 1 ends here ----------------------------------
 
 	    lSpinner$.appendTo( lContainer$ );
 
@@ -88,13 +85,16 @@ window.apexUtils.changeSpinner = function(){
 	    return lSpinner$;
 	};
 
-	//adding the custom css
+
+
+	//change 2 starts here --------------------------------
 	$('#apex-utils-spinner-css').remove();
 
 	if(spinnerCSS){
 		var toAppend = '<style id="apex-utils-spinner-css">'+ spinnerCSS +'</style>';
 		$('head').append(toAppend);
 	}
+	//change 2 ends here ----------------------------------
 };
 
 
