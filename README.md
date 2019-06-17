@@ -8,7 +8,7 @@ Demo: https://www.apexutils.com
 
 Use this simple dynamic action Plug-in to replace the default APEX spinner shown while a report refreshes, on page submission, or wherever `apex.util.showSpinner` is called.
 
-You should run it on DA on page load. Every spinner shown from then on will use the new markup.
+You should run this DA on page load. Every spinner shown from then on will use the new markup.
 
 ### Attributes
 
