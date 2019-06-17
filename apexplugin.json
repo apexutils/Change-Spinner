@@ -1,0 +1,29 @@
+{
+  "name" : "APEX Utils - Change Spinner",
+  "version" : "1.0",
+  "description" : "Personaize your APEX Apps by replacing the default APEX Spinner with your own custom one. All you have to do is provide the HTML and CSS, and run this plug-in on Page Load.",
+  "keywords" : ["spinner", "loader", "custom"],
+  "homepage" : "https://github.com/apexutils/Change-Spinner",
+  "license" : "MIT",
+  "author" : {
+    "name" : "Stefan Dobre",
+    "email" : "apexutils@gmail.com",
+    "url" : "https://www.apexutils.com"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/apexutils/Change-Spinner"
+  },
+ "oracle" : {
+    "versions" : ["11.2.0.1", "12.1.0.1", "12.2.0.1", "18.1.0", "19.1.0"],
+    "apex" : {
+      "versions" : ["18.2.0", "19.1.0"],
+      "plugin" : {
+        "internalName" : "COM.APEXUTILS.CHANGESPINNER",
+        "type" : "dynamic action",
+        "demo" : "https://www.apexutils.com",
+        "previewImage" : "https://repository-images.githubusercontent.com/189558948/4969ab80-8e84-11e9-84aa-c69da91e1e35"
+      }
+    }
+  }
+}
