@@ -30,7 +30,12 @@ window.apexUtils.changeSpinner = function(){
 
 	    lSpinner$ = $( spinnerHTML );
 
-	    lSpinner$.css('z-index', 2000);
+	    lSpinner$.css({
+	    	zIndex: 2000,
+	    	boxSizing: 'border-box',
+	    	display: 'block',
+	    	position: 'absolute'
+	    });
 	    //change 1 ends here ----------------------------------
 
 	    lSpinner$.appendTo( lContainer$ );
