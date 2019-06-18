@@ -31,6 +31,7 @@ Unfortunately the default markup for the spinner is hardcoded in the `apex.util.
 ### Changelog
 
 **v1.1** fixed issue on modal page
+
 **v1.0** initial release
 
 ### License
