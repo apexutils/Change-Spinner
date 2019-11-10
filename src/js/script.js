@@ -25,10 +25,13 @@ window.apexUtils.changeSpinner = function(){
 	        };
 
 	    //change 1 starts here --------------------------------
-	    spinnerHTML = spinnerHTML.replace(/#ALERT#/g, lOptions.alert);
-	    spinnerHTML = spinnerHTML.replace(/#SPINNERCLASS#/g, lOptions.spinnerClass);
 
-	    lSpinner$ = $( spinnerHTML );
+	    var spinnerHTMLClone = spinnerHTML;
+
+	    spinnerHTMLClone = spinnerHTMLClone.replace(/#ALERT#/g, lOptions.alert);
+	    spinnerHTMLClone = spinnerHTMLClone.replace(/#SPINNERCLASS#/g, lOptions.spinnerClass);
+
+	    lSpinner$ = $( spinnerHTMLClone );
 
 	    lSpinner$.css({
 	    	zIndex: 2000,
@@ -101,6 +104,3 @@ window.apexUtils.changeSpinner = function(){
 	}
 	//change 2 ends here ----------------------------------
 };
-
-
-
