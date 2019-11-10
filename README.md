@@ -1,6 +1,6 @@
 # APEX Utils - Change Spinner
 
-![](https://img.shields.io/badge/Type-Dynamic_Action-orange.svg) ![](https://img.shields.io/badge/APEX-18.2-success.svg) ![](https://img.shields.io/badge/APEX-19.1-success.svg)
+![](https://img.shields.io/badge/Type-Dynamic_Action-orange.svg) ![](https://img.shields.io/badge/APEX-18.2-success.svg) ![](https://img.shields.io/badge/APEX-19.1-success.svg) ![](https://img.shields.io/badge/APEX-19.2-success.svg)
 
 Demo: https://www.apexutils.com
 
@@ -29,6 +29,8 @@ Chances are you won't design the spinner yourself, so here are some great resour
 Unfortunately the default markup for the spinner is hardcoded in the `apex.util.showSpinner` function as opposed to it being passed down by the caller. I found the best way to change it is to override the function completely, this time using the custom HTML. The CSS is simply appended to the document.
 
 ### Changelog
+
+**v1.2** fixed spinnerClass + help text
 
 **v1.1** fixed issue on modal page
 
